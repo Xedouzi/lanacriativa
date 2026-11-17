@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="pt-BR" data-type="place">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LáNaCriativa | Presentes divertidos em Cravinhos</title>
+<meta name="description" content="Presentes criativos, divertidos e diferentes em Cravinhos: camisetas, moletons, bonés, canecas, luminárias e acessórios. Pedidos pelo WhatsApp e envio para todo o Brasil.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="only light">
+<meta name="darkreader-lock">
+<meta name="theme-color" content="#120D1C">
+<meta property="og:title" content="LáNaCriativa | Presentes divertidos">
+<meta property="og:description" content="Presentes criativos, divertidos e diferentes. Av. Pedro Duarte Amoroso, Cravinhos.">
+<meta property="og:image" content="img/fachada.webp">
+<link rel="icon" href="img/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/fachada.webp">
+<script>
+/* janela aberta com mouse ou dedo: ao fechar, o foco volta ao link ou botao sem a moldura de selecao;
+   quem navega pelo teclado (Tab/Enter) continua vendo onde esta */
+(() => {
+  let viaPonteiro = false;
+  addEventListener("pointerdown", () => { viaPonteiro = true; }, true);
+  addEventListener("keydown", (e) => { if (["Tab", "Enter", " "].includes(e.key)) viaPonteiro = false; }, true);
+  const abrir = HTMLDialogElement.prototype.showModal;
+  HTMLDialogElement.prototype.showModal = function () {
+    const dlg = this;
+    if (viaPonteiro) {
+      const soltar = (ev) => {
+        if (dlg.open) return;
+        document.removeEventListener("focusin", soltar, true);
+        if (viaPonteiro && !ev.target.closest("dialog[open]")) ev.target.blur();
+      };
+      document.addEventListener("focusin", soltar, true);
+      dlg.addEventListener("close", () => setTimeout(() => document.removeEventListener("focusin", soltar, true)), { once: true });
+    }
+    return abrir.apply(this, arguments);
+  };
+})();
+</script>
+<style>
+:root {
+  color-scheme: only light;
+  --noite: #120D1C;
+  --noite-2: #1E1530;
+  --violeta: #4A17A6;
+  --violeta-claro: #6E35E0;
+  --magenta: #C8146F;
+  --rosa: #F0308F;
+  --amarelo: #F7C843;
+  --azul: #1E93DC;
+  --azul-texto: #0D64A3;
+  --nevoa: #F3F0FA;
+  --branco: #FFFFFF;
+  --tinta: #1B1626;
+  --tinta-2: #4F4760;
+  --linha: #E3DDEF;
+  --verde-zap: #179A48;
+  --degrade: linear-gradient(100deg, #6E35E0 0%, #F0308F 52%, #F7C843 100%);
+  --raio: 16px;
+  --larg: 1200px;
+  --titulo: "Titan One", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
+  --texto: "Outfit", "Segoe UI", system-ui, sans-serif;
+  --mola: cubic-bezier(.2, .8, .2, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--nevoa); color: var(--tinta); font: 400 1.0625rem/1.6 var(--texto); }
+img { display: block; max-width: 100%; height: auto; }
+main { overflow-x: clip; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--titulo); font-weight: 400; line-height: 1.08; margin: 0; letter-spacing: .005em; overflow-wrap: break-word; }
+.btn { white-space: normal; }
+p { margin: 0; }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--azul); outline-offset: 3px; border-radius: 6px; }
+.envolve { width: min(var(--larg), 100% - 32px); margin-inline: auto; }
+.pular { position: absolute; left: -999px; top: 8px; background: #fff; padding: 10px 14px; border-radius: 8px; z-index: 100; }
+.pular:focus { left: 8px; }
+
+/* botoes */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 24px; border-radius: 999px; border: 0; font-weight: 600; font-size: 1.0625rem; text-decoration: none; cursor: pointer; max-width: 100%; text-align: center; transition: transform .2s var(--mola), box-shadow .2s var(--mola), background-color .2s; }
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.98); }
+.btn-cor { background: var(--degrade); color: #1A0F2E; box-shadow: 0 8px 24px -10px rgba(240, 48, 143, .7); }
+.btn-cor:hover { box-shadow: 0 12px 28px -10px rgba(240, 48, 143, .8); }
+.btn-vazado { background: rgba(255,255,255,.08); color: #fff; box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.55); }
+.btn-vazado:hover { background: rgba(255,255,255,.16); }
+.btn-zap { background: var(--verde-zap); color: #fff; }
+.btn-zap:hover { background: #12863D; }
+.btn svg { width: 22px; height: 22px; flex: none; }
+
+/* topo */
+.topo { position: sticky; top: 0; z-index: 50; background: rgba(18, 13, 28, .94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #fff; }
+.topo .envolve { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px; }
+.marca { display: flex; align-items: center; min-height: 48px; text-decoration: none; }
+.marca img { height: 34px; width: auto; }
+.menu { display: flex; align-items: center; gap: 4px; list-style: none; margin: 0; padding: 0; }
+.menu a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 999px; text-decoration: none; font-weight: 500; color: rgba(255,255,255,.86); transition: color .2s, background-color .2s; }
+.menu a:hover { color: #fff; background: rgba(255,255,255,.08); }
+.menu .menu-zap { background: var(--verde-zap); color: #fff; margin-left: 8px; padding: 0 18px; }
+.menu .menu-zap:hover { background: #12863D; }
+#menu-botao { display: none; width: 52px; height: 52px; border: 0; background: transparent; border-radius: 12px; cursor: pointer; position: relative; }
+#menu-botao span { position: absolute; left: 13px; width: 26px; height: 3px; border-radius: 3px; background: var(--rosa); transition: transform .22s var(--mola), opacity .22s; }
+#menu-botao span:nth-child(1) { top: 17px; }
+#menu-botao span:nth-child(2) { top: 24.5px; }
+#menu-botao span:nth-child(3) { top: 32px; }
+#menu-botao[aria-expanded="true"] span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+#menu-botao[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+#menu-botao[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+/* abertura */
+.abertura { position: relative; min-height: min(88vh, 760px); display: grid; grid-template-columns: minmax(0, 1fr); align-items: end; color: #fff; background: var(--noite); overflow: hidden; isolation: isolate; }
+.abertura > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; z-index: -2; }
+.abertura::before { content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(90deg, rgba(18,13,28,.94) 0%, rgba(18,13,28,.78) 42%, rgba(18,13,28,.25) 75%, rgba(18,13,28,.1) 100%),
+              linear-gradient(0deg, rgba(18,13,28,.9) 0%, rgba(18,13,28,0) 45%); }
+.abertura .envolve { padding: 120px 0 72px; }
+.abertura-texto { max-width: 36rem; }
+.selo { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: .95rem; color: var(--amarelo); margin-bottom: 18px; }
+.selo::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--amarelo); box-shadow: 0 0 0 4px rgba(247,200,67,.22); }
+.abertura h1 { font-size: clamp(2.5rem, 6vw, 4.6rem); overflow-wrap: break-word; }
+.abertura h1 em { font-style: normal; background: var(--degrade); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.abertura p { margin-top: 20px; font-size: 1.1875rem; color: rgba(255,255,255,.88); max-width: 32rem; }
+.acoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+[data-enter] { animation: entra .8s var(--mola) both; }
+[data-enter="2"] { animation-delay: .12s; }
+[data-enter="3"] { animation-delay: .24s; }
+[data-enter="4"] { animation-delay: .36s; }
+@keyframes entra { from { opacity: 0; transform: translateY(18px); } }
+
+/* fita de fatos */
+.fita { background: var(--degrade); color: #1A0F2E; transform: rotate(-1.2deg); margin: -22px -12px 0; position: relative; z-index: 2; box-shadow: 0 10px 30px -18px rgba(74,23,166,.6); }
+.fita ul { list-style: none; margin: 0; padding: 16px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 36px; font-weight: 700; font-size: 1.0625rem; }
+.fita li { display: flex; align-items: center; gap: 10px; }
+.fita svg { width: 22px; height: 22px; flex: none; }
+
+/* secoes */
+section { padding: 96px 0; }
+.cabeca { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 32px; margin-bottom: 40px; }
+.cabeca > * { min-width: 0; max-width: 100%; }
+.cabeca h2 { font-size: clamp(2rem, 4vw, 3rem); color: var(--violeta); }
+.cabeca p { color: var(--tinta-2); max-width: 34rem; font-size: 1.125rem; }
+
+/* categorias: adesivos */
+.adesivos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 24px; }
+.adesivo { display: block; width: 100%; border: 0; background: none; padding: 0; cursor: pointer; text-align: center; }
+.adesivo .foto { display: block; aspect-ratio: 1; border-radius: 28px; overflow: hidden; border: 7px solid #fff; box-shadow: 0 14px 30px -16px rgba(30, 21, 48, .45), 0 0 0 1px var(--linha); transform: rotate(var(--giro, -3deg)); transition: transform .3s var(--mola), box-shadow .3s var(--mola); }
+.adesivos li:nth-child(even) .adesivo { --giro: 3deg; }
+.adesivo img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s var(--mola); }
+.adesivo:hover .foto { transform: rotate(0) translateY(-4px); box-shadow: 0 20px 36px -16px rgba(30, 21, 48, .5), 0 0 0 1px var(--linha); }
+.adesivo:hover img { transform: scale(1.03); }
+.adesivo strong { display: block; margin-top: 16px; font-weight: 600; font-size: 1.0625rem; color: var(--tinta); }
+
+/* achador */
+.achador { background: var(--noite); color: #fff; position: relative; overflow: hidden; }
+.achador::before { content: ""; position: absolute; width: 640px; height: 640px; right: -220px; top: -260px; border-radius: 50%; background: radial-gradient(circle, rgba(240,48,143,.32), rgba(110,53,224,0) 65%); pointer-events: none; }
+.achador .cabeca h2 { color: #fff; }
+.achador .cabeca h2 em { font-style: normal; color: var(--amarelo); }
+.achador .cabeca p { color: rgba(255,255,255,.78); }
+.achador-grade { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 40px; position: relative; }
+.pergunta { border: 0; margin: 0 0 26px; padding: 0; min-width: 0; }
+.pergunta legend { font-weight: 600; font-size: 1.125rem; margin-bottom: 12px; padding: 0; }
+.pergunta legend span { color: var(--amarelo); font-family: var(--titulo); margin-right: 8px; }
+.opcoes { display: flex; flex-wrap: wrap; gap: 10px; }
+.opcoes label { position: relative; }
+.opcoes input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.opcoes label span { display: inline-flex; align-items: center; min-height: 46px; padding: 0 18px; border-radius: 999px; background: rgba(255,255,255,.08); box-shadow: inset 0 0 0 1px rgba(255,255,255,.22); transition: background-color .2s, box-shadow .2s, color .2s, transform .2s var(--mola); cursor: pointer; }
+.opcoes label:hover span { background: rgba(255,255,255,.14); }
+.opcoes input:checked + span { background: var(--amarelo); color: #1A0F2E; box-shadow: none; font-weight: 600; }
+.opcoes input:focus-visible + span { outline: 3px solid var(--azul); outline-offset: 3px; }
+.resultado { background: rgba(255,255,255,.06); border-radius: 24px; padding: 28px; box-shadow: inset 0 0 0 1px rgba(255,255,255,.14); min-width: 0; }
+.resultado h3 { font-family: var(--texto); font-weight: 600; font-size: 1.125rem; margin-bottom: 18px; color: rgba(255,255,255,.9); }
+.sugestoes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.sugestoes a { display: block; text-decoration: none; color: #fff; }
+.sugestoes img { aspect-ratio: 1; object-fit: cover; width: 100%; border-radius: 14px; transition: transform .3s var(--mola); }
+.sugestoes a:hover img { transform: translateY(-3px); }
+.sugestoes strong { display: block; margin-top: 10px; font-weight: 500; font-size: .98rem; line-height: 1.35; }
+.sugestoes span { display: block; color: var(--amarelo); font-weight: 700; margin-top: 2px; }
+.balao { margin-top: 24px; background: #DCF8C6; color: #13321E; border-radius: 16px 16px 16px 4px; padding: 14px 16px; font-size: 1rem; line-height: 1.5; max-width: 34rem; }
+.balao small { display: block; color: #3D6B4C; font-size: .85rem; margin-bottom: 4px; font-weight: 600; }
+.resultado .btn { margin-top: 18px; }
+.vazio { color: rgba(255,255,255,.75); }
+
+/* vitrine */
+.filtros { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+.filtros button { min-height: 44px; padding: 0 18px; border-radius: 999px; border: 0; background: #fff; box-shadow: inset 0 0 0 1px var(--linha); cursor: pointer; font-weight: 500; transition: background-color .2s, color .2s, box-shadow .2s; }
+.filtros button:hover { box-shadow: inset 0 0 0 1px var(--violeta-claro); }
+.filtros button[aria-pressed="true"] { background: var(--violeta); color: #fff; box-shadow: none; }
+.filtros button small { opacity: .7; margin-left: 4px; font-size: .9em; }
+.produtos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: 24px; }
+.produto { height: 100%; }
+.produto a { display: flex; flex-direction: column; height: 100%; background: #fff; border-radius: 20px; text-decoration: none; overflow: hidden; box-shadow: 0 1px 0 var(--linha), 0 10px 26px -20px rgba(30,21,48,.35); transition: transform .25s var(--mola), box-shadow .25s var(--mola); }
+.produto a:hover { transform: translateY(-2px); box-shadow: 0 1px 0 var(--linha), 0 18px 32px -20px rgba(30,21,48,.45); }
+.produto .quadro { position: relative; aspect-ratio: 1; overflow: hidden; background: var(--nevoa); }
+.produto img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s var(--mola); }
+.produto a:hover img { transform: scale(1.03); }
+.preco { position: absolute; left: 12px; bottom: 12px; background: var(--amarelo); color: #1A0F2E; font-weight: 700; padding: 6px 12px; border-radius: 10px; transform: rotate(-3deg); box-shadow: 0 6px 14px -8px rgba(0,0,0,.5); font-size: 1rem; }
+.produto .info { padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.produto .cat { font-size: .875rem; color: var(--azul-texto); font-weight: 600; }
+.produto h3 { font-family: var(--texto); font-weight: 600; font-size: 1.0625rem; line-height: 1.35; min-height: 2.7em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* natal */
+.natal { padding: 0; background: #fff; }
+.natal-grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: stretch; }
+.natal-foto { position: relative; min-height: 520px; overflow: hidden; }
+.natal-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.natal-texto { padding: 88px max(16px, calc((100vw - var(--larg)) / 2)) 88px 64px; display: flex; flex-direction: column; justify-content: center; }
+.natal-texto .grande { font-family: var(--titulo); font-size: clamp(4rem, 10vw, 8.5rem); line-height: .9; background: var(--degrade); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.natal-texto h2 { font-size: clamp(1.6rem, 3vw, 2.25rem); color: var(--violeta); margin-top: 18px; }
+.natal-texto p { margin-top: 16px; color: var(--tinta-2); font-size: 1.125rem; max-width: 30rem; }
+.passos { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 12px; }
+.passos li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; align-items: center; font-weight: 500; }
+.passos b { font-family: var(--titulo); font-weight: 400; font-size: 1.6rem; color: var(--rosa); text-align: center; }
+.natal-texto .btn { margin-top: 28px; align-self: flex-start; }
+
+/* como chegar */
+.chegar-grade { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 32px; align-items: stretch; }
+.cartao { background: #fff; border-radius: 24px; padding: 32px; box-shadow: 0 1px 0 var(--linha), 0 10px 26px -20px rgba(30,21,48,.35); min-width: 0; }
+.cartao h3 { font-family: var(--titulo); font-size: 1.6rem; color: var(--violeta); margin-bottom: 18px; }
+.dados { list-style: none; margin: 0 0 24px; padding: 0; display: grid; gap: 16px; }
+.dados li { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 12px; }
+.dados svg { width: 24px; height: 24px; color: var(--magenta); margin-top: 2px; }
+.dados strong { display: block; font-weight: 600; }
+.dados a { color: var(--azul-texto); overflow-wrap: anywhere; }
+.cartao .acoes { margin-top: 8px; }
+.cartao .btn-vazado { color: var(--violeta); box-shadow: inset 0 0 0 1.5px var(--violeta); background: #fff; }
+.cartao .btn-vazado:hover { background: var(--nevoa); }
+.mapa { border-radius: 24px; overflow: hidden; min-height: 380px; background: #E9E5F2; box-shadow: 0 1px 0 var(--linha); }
+.mapa iframe { width: 100%; height: 100%; min-height: 380px; border: 0; display: block; }
+
+/* rodape */
+.rodape { background: var(--noite); color: rgba(255,255,255,.8); padding: 56px 0 40px; }
+.rodape-grade { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 28px; align-items: flex-start; }
+.rodape img { height: 40px; width: auto; }
+.rodape p { margin-top: 12px; max-width: 26rem; }
+.rodape nav ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.rodape nav a { display: inline-flex; min-height: 44px; align-items: center; text-decoration: none; }
+.rodape nav a:hover { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
+.creditos { margin-top: 32px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.14); font-size: .875rem; color: rgba(255,255,255,.6); display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+
+/* whatsapp flutuante */
+.zap-flutua { position: fixed; right: max(18px, env(safe-area-inset-right)); bottom: max(18px, env(safe-area-inset-bottom)); width: 60px; height: 60px; border-radius: 50%; background: var(--verde-zap); color: #fff; display: grid; place-items: center; box-shadow: 0 10px 24px -8px rgba(0,0,0,.45); z-index: 40; opacity: 0; transform: translateY(16px) scale(.9); pointer-events: none; transition: opacity .25s, transform .25s var(--mola); }
+.zap-flutua.visivel { opacity: 1; transform: none; pointer-events: auto; }
+.zap-flutua svg { width: 30px; height: 30px; }
+
+/* ficha do produto */
+dialog.ficha { width: min(920px, 100% - 24px); max-height: calc(100dvh - 24px); padding: 0; border: 0; border-radius: 24px; background: #fff; color: var(--tinta); box-shadow: 0 30px 80px -20px rgba(18,13,28,.6); overflow: auto; }
+dialog.ficha::backdrop { background: rgba(18,13,28,.65); backdrop-filter: blur(3px); }
+dialog.ficha[open] { animation: abre .3s var(--mola); }
+@keyframes abre { from { opacity: 0; transform: translateY(14px) scale(.98); } }
+.ficha-grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.ficha-grade > img { width: 100%; height: 100%; aspect-ratio: 1; object-fit: cover; }
+.ficha-corpo { padding: 36px 32px 32px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.ficha-corpo .cat { color: var(--azul-texto); font-weight: 600; font-size: .95rem; }
+.ficha-corpo h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); color: var(--violeta); }
+.ficha-corpo .valor { font-weight: 700; font-size: 1.5rem; }
+.ficha-corpo .valor small { font-weight: 500; font-size: .9rem; color: var(--tinta-2); display: block; }
+.ficha-corpo p { color: var(--tinta-2); }
+.tamanhos { border: 0; padding: 0; margin: 6px 0 0; min-width: 0; }
+.tamanhos legend { font-weight: 600; margin-bottom: 8px; padding: 0; }
+.tamanhos .opcoes label span { background: var(--nevoa); box-shadow: inset 0 0 0 1px var(--linha); min-width: 52px; justify-content: center; }
+.tamanhos .opcoes input:checked + span { background: var(--violeta); color: #fff; }
+.ficha-corpo .btn { margin-top: auto; }
+.ficha-corpo .aviso { font-size: .9rem; color: var(--tinta-2); }
+.fechar { position: absolute; top: 12px; right: 12px; width: 48px; height: 48px; border-radius: 50%; border: 0; background: rgba(255,255,255,.92); box-shadow: 0 4px 14px -6px rgba(0,0,0,.4); cursor: pointer; display: grid; place-items: center; z-index: 2; }
+.fechar svg { width: 22px; height: 22px; }
+
+/* responsivo */
+@media (max-width: 1100px) {
+  .adesivos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .produtos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  #menu-botao { display: block; }
+  .menu { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; background: var(--noite); padding: 8px 16px 18px; box-shadow: 0 20px 30px -20px rgba(0,0,0,.6); }
+  .menu.aberto { display: flex; animation: desce .22s var(--mola); }
+  .menu a { min-height: 52px; border-radius: 10px; padding: 0 12px; }
+  .menu .menu-zap { margin: 10px 0 0; justify-content: center; }
+  @keyframes desce { from { opacity: 0; transform: translateY(-8px); } }
+  section { padding: 72px 0; }
+  .achador-grade, .chegar-grade { grid-template-columns: minmax(0, 1fr); }
+  .natal-grade { grid-template-columns: minmax(0, 1fr); }
+  .natal-foto { min-height: 300px; }
+  .natal-texto { padding: 56px 16px 64px; }
+  .ficha-grade { grid-template-columns: minmax(0, 1fr); }
+  .ficha-grade > img { aspect-ratio: 4 / 3; height: auto; }
+  .ficha-corpo { padding: 24px 20px 24px; }
+}
+@media (max-width: 640px) {
+  .abertura { min-height: 82vh; }
+  .abertura::before { background: linear-gradient(0deg, rgba(18,13,28,.96) 0%, rgba(18,13,28,.82) 55%, rgba(18,13,28,.35) 100%); }
+  .abertura .envolve { padding: 100px 0 56px; }
+  .abertura p { font-size: 1.0625rem; }
+  .acoes .btn { flex: 1 1 100%; }
+  .fita ul { justify-content: flex-start; padding: 14px 24px; font-size: 1rem; flex-direction: column; gap: 8px; }
+  .adesivos { gap: 20px 16px; }
+  .adesivo .foto { border-width: 5px; border-radius: 22px; }
+  .produtos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .produto .info { padding: 12px 12px 16px; }
+  .produto h3 { font-size: 1rem; }
+  .preco { font-size: .9rem; left: 8px; bottom: 8px; padding: 4px 9px; }
+  .sugestoes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .resultado { padding: 20px; }
+  .cartao { padding: 24px 20px; }
+  .natal-texto .btn, .cartao .btn { align-self: stretch; width: 100%; }
+}
+@media (max-width: 380px) {
+  .adesivos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .produtos { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+</style>
+</head>
+<body>
+<a class="pular" href="#vitrine">Pular para a vitrine</a>
+
+<header class="topo">
+  <div class="envolve">
+    <a class="marca" href="#inicio" aria-label="LáNaCriativa, início"><img src="img/logo.webp" alt="LáNaCriativa" width="547" height="96"></a>
+    <button id="menu-botao" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#vitrine">Vitrine</a></li>
+      <li><a href="#achador">Achar um presente</a></li>
+      <li><a href="#natal">Natal</a></li>
+      <li><a href="#chegar">Como chegar</a></li>
+      <li><a class="menu-zap" href="https://wa.me/5516992968297" target="_blank" rel="noopener">(16) 99296-8297</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="abertura" aria-labelledby="titulo" style="padding:0">
+    <img src="img/fachada.webp" alt="Fachada da LáNaCriativa na Av. Pedro Duarte Amoroso, com camisetas, moletons e presentes na vitrine" width="1600" height="1200" fetchpriority="high">
+    <div class="envolve">
+      <div class="abertura-texto">
+        <p class="selo" data-enter>Presentes divertidos em Cravinhos</p>
+        <h1 id="titulo" data-enter="2">Presentes <em>criativos, divertidos</em> e diferentes.</h1>
+        <p data-enter="3">Camisetas, moletons, bonés, canecas, luminárias e acessórios para quem gosta de games, séries, música e boas risadas. Atendemos na loja e enviamos para todo o Brasil.</p>
+        <div class="acoes" data-enter="4">
+          <a class="btn btn-cor" href="#achador">Achar um presente</a>
+          <a class="btn btn-vazado" href="#vitrine">Ver a vitrine</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="fita" aria-label="Destaques">
+    <ul>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Loja na Av. Pedro Duarte Amoroso</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></svg>Enviamos para todo o Brasil</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12Z"/></svg>Pedidos pelo WhatsApp</li>
+    </ul>
+  </div>
+
+  <section id="categorias" aria-labelledby="t-cat">
+    <div class="envolve">
+      <div class="cabeca">
+        <h2 id="t-cat">O que você procura?</h2>
+        <p>Escolha uma categoria para ver os produtos na vitrine.</p>
+      </div>
+      <ul class="adesivos" id="lista-categorias"></ul>
+    </div>
+  </section>
+
+  <section class="achador" id="achador" aria-labelledby="t-achar">
+    <div class="envolve">
+      <div class="cabeca">
+        <h2 id="t-achar">Não sabe o que dar? <em>Nós ajudamos.</em></h2>
+        <p>Responda três perguntas e mostramos as melhores opções. Depois, é só enviar a mensagem pronta pelo WhatsApp.</p>
+      </div>
+      <div class="achador-grade">
+        <form id="form-achar" onsubmit="return false">
+          <fieldset class="pergunta">
+            <legend><span>1</span>Para quem é o presente?</legend>
+            <div class="opcoes" data-grupo="quem"></div>
+          </fieldset>
+          <fieldset class="pergunta">
+            <legend><span>2</span>Do que a pessoa gosta?</legend>
+            <div class="opcoes" data-grupo="gosto"></div>
+          </fieldset>
+          <fieldset class="pergunta">
+            <legend><span>3</span>Quanto pretende investir?</legend>
+            <div class="opcoes" data-grupo="faixa"></div>
+          </fieldset>
+        </form>
+        <div class="resultado" aria-live="polite">
+          <h3 id="t-resultado">Sugestões da loja</h3>
+          <ul class="sugestoes" id="sugestoes"></ul>
+          <div class="balao" id="balao"><small>Mensagem que será enviada</small><span id="balao-texto"></span></div>
+          <a class="btn btn-zap" id="achar-zap" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.2-1.6-1.2-3s.7-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.8-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>Enviar pelo WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="vitrine" aria-labelledby="t-vit">
+    <div class="envolve">
+      <div class="cabeca">
+        <h2 id="t-vit">Vitrine</h2>
+        <p>Toque no produto para ver os detalhes e fazer o pedido pelo WhatsApp.</p>
+      </div>
+      <div class="filtros" id="filtros" role="group" aria-label="Filtrar por categoria"></div>
+      <ul class="produtos" id="produtos"></ul>
+    </div>
+  </section>
+
+  <section class="natal" id="natal" aria-labelledby="t-natal">
+    <div class="natal-grade">
+      <div class="natal-foto"><img src="img/presentes-natal.webp" alt="Presentes embrulhados em papéis coloridos de Natal" width="720" height="720" loading="lazy"></div>
+      <div class="natal-texto">
+        <p class="grande" aria-hidden="true">Natal</p>
+        <h2 id="t-natal">Garanta os presentes de fim de ano sem pressa.</h2>
+        <p>Envie a sua lista pelo WhatsApp. Confirmamos a disponibilidade de cada item e combinamos a retirada na loja ou o envio.</p>
+        <ol class="passos">
+          <li><b>1</b>Monte a lista com os produtos da vitrine.</li>
+          <li><b>2</b>Envie pelo WhatsApp e aguarde a nossa confirmação.</li>
+          <li><b>3</b>Retire na loja ou receba no endereço combinado.</li>
+        </ol>
+        <a class="btn btn-zap" href="https://wa.me/5516992968297?text=Ol%C3%A1!%20Gostaria%20de%20separar%20presentes%20de%20Natal.%20Poderiam%20me%20ajudar%3F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.2-1.6-1.2-3s.7-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.8-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>Separar presentes de Natal</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="chegar" aria-labelledby="t-chegar">
+    <div class="envolve">
+      <div class="cabeca">
+        <h2 id="t-chegar">Como chegar</h2>
+        <p>Estamos na avenida principal de Cravinhos. Se preferir, atendemos pelo WhatsApp e enviamos para todo o Brasil.</p>
+      </div>
+      <div class="chegar-grade">
+        <div class="cartao">
+          <h3>LáNaCriativa</h3>
+          <ul class="dados">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><strong>Endereço</strong>Av. Pedro Duarte Amoroso, 266, sala 2, Jardim Itapuã, Cravinhos (SP)</div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12Z"/></svg><div><strong>WhatsApp</strong><a href="https://wa.me/5516992968297" target="_blank" rel="noopener">(16) 99296-8297</a></div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><div><strong>E-mail</strong><a href="mailto:latikapresentes@gmail.com">latikapresentes@gmail.com</a></div></li>
+          </ul>
+          <div class="acoes">
+            <a class="btn btn-zap" href="https://wa.me/5516992968297" target="_blank" rel="noopener">Falar pelo WhatsApp</a>
+            <a class="btn btn-vazado" href="https://www.google.com/maps/search/?api=1&query=L%C3%A1NaCriativa%20Cravinhos&query_place_id=ChIJkQC7RhzLuZQR4hrkgiRxQEI" target="_blank" rel="noopener">Abrir no mapa</a>
+          </div>
+        </div>
+        <div class="mapa"><iframe title="Mapa da LáNaCriativa em Cravinhos" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=-21.339734,-47.741922&z=16&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="envolve">
+    <div class="rodape-grade">
+      <div>
+        <img src="img/logo.webp" alt="LáNaCriativa" width="547" height="96" loading="lazy">
+        <p>Presentes criativos, divertidos e diferentes. Av. Pedro Duarte Amoroso, 266, sala 2, Cravinhos (SP).</p>
+      </div>
+      <nav aria-label="Rodapé">
+        <ul>
+          <li><a href="#vitrine">Vitrine</a></li>
+          <li><a href="#achador">Achar um presente</a></li>
+          <li><a href="https://www.facebook.com/lanacriativa.presentes/" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="creditos">
+      <span>© 2026 LáNaCriativa Presentes Divertidos</span>
+      <span>Fotos ilustrativas dos produtos: Unsplash</span>
+    </div>
+  </div>
+</footer>
+
+<a class="zap-flutua" id="zap-flutua" href="https://wa.me/5516992968297" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.2-1.6-1.2-3s.7-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.8-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg></a>
+
+<dialog class="ficha" id="ficha" aria-labelledby="ficha-nome">
+  <button class="fechar" id="ficha-fechar" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <div class="ficha-grade">
+    <img id="ficha-foto" src="" alt="" width="720" height="720">
+    <div class="ficha-corpo">
+      <span class="cat" id="ficha-cat"></span>
+      <h2 id="ficha-nome"></h2>
+      <p class="valor" id="ficha-valor"></p>
+      <p id="ficha-desc"></p>
+      <fieldset class="tamanhos" id="ficha-tamanhos" hidden>
+        <legend>Tamanho</legend>
+        <div class="opcoes" id="ficha-opcoes"></div>
+      </fieldset>
+      <a class="btn btn-zap" id="ficha-zap" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.2-1.6-1.2-3s.7-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.8-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>Pedir pelo WhatsApp</a>
+      <p class="aviso">Confirmamos a disponibilidade e o valor do envio pelo WhatsApp.</p>
+    </div>
+  </div>
+</dialog>
+
+<script>
+const ZAP = "5516992968297";
+const zap = (txt) => "https://wa.me/" + ZAP + "?text=" + encodeURIComponent(txt);
+const real = (v) => v.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+
+/* CATEGORIAS: para trocar a foto, mude o arquivo em img/ */
+const CATEGORIAS = [
+  { id: "roupas", nome: "Camisetas e moletons", foto: "moletom-frase" },
+  { id: "bones", nome: "Bonés", foto: "bone-amarelo" },
+  { id: "canecas", nome: "Canecas e copos", foto: "caneca-segunda" },
+  { id: "decoracao", nome: "Decoração e neon", foto: "neon-aniversario" },
+  { id: "acessorios", nome: "Chaveiros e meias", foto: "meias-vitrine" },
+  { id: "jogos", nome: "Jogos e pelúcias", foto: "jogos-prateleira" }
+];
+
+/* PRODUTOS: para cadastrar, copie um bloco. tam = tamanhos (deixe [] quando nao tiver).
+   quem: amigo, par, crianca, colega, eu | gosto: games, series, musica, humor, fofura */
+const PRODUTOS = [
+  { id: "camiseta-epico", nome: "Camiseta Everything Is Epic", cat: "roupas", preco: 69.9, foto: "camiseta-epico", tam: ["P", "M", "G", "GG"], quem: ["amigo", "par", "eu"], gosto: ["humor", "musica"], desc: "Camiseta preta de algodão com estampa em letras brancas. Caimento reto, do P ao GG." },
+  { id: "camiseta-grafica", nome: "Camiseta Estampa Gráfica", cat: "roupas", preco: 64.9, foto: "camiseta-grafica", tam: ["P", "M", "G", "GG"], quem: ["amigo", "par", "eu"], gosto: ["games", "series"], desc: "Camiseta preta de algodão com estampa no peito. Temos outras estampas na loja: pergunte pelo WhatsApp." },
+  { id: "moletom-frase", nome: "Moletom I'll See You Tomorrow", cat: "roupas", preco: 159.9, foto: "moletom-frase", tam: ["P", "M", "G", "GG"], quem: ["par", "amigo", "eu"], gosto: ["humor", "musica"], desc: "Moletom verde-escuro com capuz e estampa grande na frente. Flanelado por dentro." },
+  { id: "moletom-branco", nome: "Moletom Branco com Capuz", cat: "roupas", preco: 139.9, foto: "moletom-branco", tam: ["P", "M", "G", "GG"], quem: ["par", "amigo", "eu"], gosto: ["fofura", "musica"], desc: "Moletom branco liso com capuz e bolso canguru. Combina com qualquer estampa de boné." },
+  { id: "bone-amarelo", nome: "Boné Aba Curva Amarelo", cat: "bones", preco: 59.9, foto: "bone-amarelo", tam: [], quem: ["amigo", "par", "eu", "crianca"], gosto: ["musica", "games"], desc: "Boné de aba curva com regulagem atrás. Tamanho único." },
+  { id: "bone-trucker", nome: "Boné Trucker Preto e Branco", cat: "bones", preco: 54.9, foto: "bone-trucker", tam: [], quem: ["amigo", "par", "eu"], gosto: ["musica", "humor"], desc: "Boné trucker com tela atrás e frente branca. Tamanho único, com regulagem." },
+  { id: "caneca-morto", nome: "Caneca Dead Inside", cat: "canecas", preco: 44.9, foto: "caneca-morto", tam: [], quem: ["amigo", "colega", "par", "eu"], gosto: ["humor", "series"], desc: "Caneca de cerâmica de 325 ml para quem precisa de café antes de qualquer conversa." },
+  { id: "caneca-segunda", nome: "Caneca Cara de Segunda-feira", cat: "canecas", preco: 39.9, foto: "caneca-segunda", tam: [], quem: ["colega", "amigo", "eu"], gosto: ["humor"], desc: "Caneca verde-água com a cara de quem acabou de acordar. Cerâmica, 300 ml." },
+  { id: "caneca-sapo", nome: "Caneca Sapinho Escondido", cat: "canecas", preco: 49.9, foto: "caneca-sapo", tam: [], quem: ["amigo", "par", "crianca", "eu"], gosto: ["fofura"], desc: "Caneca com um sapinho no fundo que aparece quando a bebida acaba." },
+  { id: "copo-termico", nome: "Copo Térmico de Viagem 450 ml", cat: "canecas", preco: 59.9, foto: "copo-termico", tam: [], quem: ["colega", "amigo", "eu"], gosto: ["games", "musica"], desc: "Copo de inox com tampa, mantém o café quente no caminho para o trabalho." },
+  { id: "neon", nome: "Luminária Neon Ready or Not", cat: "decoracao", preco: 189.9, foto: "neon-aniversario", tam: [], quem: ["par", "amigo", "eu"], gosto: ["games", "musica"], desc: "Luminária de LED em neon rosa para quarto ou setup gamer. Liga na tomada USB." },
+  { id: "vinil", nome: "Disco de Vinil Decorativo", cat: "decoracao", preco: 34.9, foto: "vinil", tam: [], quem: ["amigo", "par", "colega", "eu"], gosto: ["musica"], desc: "Disco de vinil para decorar a parede ou a estante de quem ama música." },
+  { id: "chaveiro-anime", nome: "Chaveiro Acrílico Anime", cat: "acessorios", preco: 24.9, foto: "chaveiro-anime", tam: [], quem: ["amigo", "crianca", "colega", "eu"], gosto: ["series", "fofura"], desc: "Chaveiro de acrílico com mosquetão dourado. Vários personagens na loja." },
+  { id: "chaveiro-coelho", nome: "Chaveiro de Pelúcia Coelhinha", cat: "acessorios", preco: 29.9, foto: "chaveiro-coelho", tam: [], quem: ["crianca", "amigo", "par"], gosto: ["fofura"], desc: "Chaveiro de pelúcia macia com saia xadrez. Ótimo para mochila." },
+  { id: "meias", nome: "Kit 3 Pares de Meias Divertidas", cat: "acessorios", preco: 39.9, foto: "meias", tam: [], quem: ["colega", "amigo", "crianca", "eu"], gosto: ["humor", "fofura"], desc: "Três pares de meias coloridas, cano médio, tamanho 34 a 42." },
+  { id: "dados", nome: "Kit de Dados Coloridos", cat: "jogos", preco: 29.9, foto: "dados", tam: [], quem: ["amigo", "crianca", "eu"], gosto: ["games"], desc: "Dados coloridos para jogos de tabuleiro e RPG, com saquinho para guardar." },
+  { id: "pelucia-dino", nome: "Pelúcia Dinossauro 40 cm", cat: "jogos", preco: 79.9, foto: "pelucia-dino", tam: [], quem: ["crianca", "par", "amigo"], gosto: ["fofura"], desc: "Dinossauro de pelúcia verde, macio e grande para abraçar." }
+];
+
+const nomeCat = (id) => (CATEGORIAS.find((c) => c.id === id) || {}).nome || "";
+
+/* categorias */
+const listaCat = document.getElementById("lista-categorias");
+listaCat.innerHTML = CATEGORIAS.map((c) => `
+  <li><button class="adesivo" type="button" data-cat="${c.id}">
+    <span class="foto"><img src="img/${c.foto}.webp" alt="" width="720" height="720" loading="lazy"></span>
+    <strong>${c.nome}</strong>
+  </button></li>`).join("");
+listaCat.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-cat]"); if (!b) return;
+  filtrar(b.dataset.cat);
+  document.getElementById("vitrine").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+});
+
+/* vitrine */
+const filtros = document.getElementById("filtros");
+const produtosEl = document.getElementById("produtos");
+let catAtual = "todos";
+function desenharFiltros() {
+  const conta = (id) => PRODUTOS.filter((p) => id === "todos" || p.cat === id).length;
+  filtros.innerHTML = [{ id: "todos", nome: "Todos" }, ...CATEGORIAS].map((c) =>
+    `<button type="button" data-f="${c.id}" aria-pressed="${c.id === catAtual}">${c.nome}<small>${conta(c.id)}</small></button>`).join("");
+}
+function cartao(p) {
+  return `<li class="produto"><a href="#p-${p.id}" data-id="${p.id}">
+    <span class="quadro"><img src="img/${p.foto}.webp" alt="${p.nome}" width="720" height="720" loading="lazy"><span class="preco">${real(p.preco)}</span></span>
+    <span class="info"><span class="cat">${nomeCat(p.cat)}</span><h3>${p.nome}</h3></span>
+  </a></li>`;
+}
+function filtrar(id) {
+  catAtual = id;
+  desenharFiltros();
+  produtosEl.innerHTML = PRODUTOS.filter((p) => id === "todos" || p.cat === id).map(cartao).join("");
+}
+filtros.addEventListener("click", (e) => { const b = e.target.closest("[data-f]"); if (b) filtrar(b.dataset.f); });
+filtrar("todos");
+
+/* ficha do produto */
+const ficha = document.getElementById("ficha");
+let atual = null;
+function msgProduto() {
+  const t = ficha.querySelector('input[name="tam"]:checked');
+  return `Olá! Tenho interesse no produto "${atual.nome}"${t ? ", tamanho " + t.value : ""} (${real(atual.preco)}). Está disponível?`;
+}
+function abrirFicha(id) {
+  atual = PRODUTOS.find((p) => p.id === id); if (!atual) return;
+  document.getElementById("ficha-foto").src = "img/" + atual.foto + ".webp";
+  document.getElementById("ficha-foto").alt = atual.nome;
+  document.getElementById("ficha-cat").textContent = nomeCat(atual.cat);
+  document.getElementById("ficha-nome").textContent = atual.nome;
+  document.getElementById("ficha-valor").innerHTML = real(atual.preco);
+  document.getElementById("ficha-desc").textContent = atual.desc;
+  const tam = document.getElementById("ficha-tamanhos");
+  tam.hidden = !atual.tam.length;
+  document.getElementById("ficha-opcoes").innerHTML = atual.tam.map((t, i) =>
+    `<label><input type="radio" name="tam" value="${t}" ${i === 1 ? "checked" : ""}><span>${t}</span></label>`).join("");
+  document.getElementById("ficha-zap").href = zap(msgProduto());
+  if (!ficha.open) ficha.showModal();
+  history.replaceState(null, "", "#p-" + atual.id);
+}
+function fecharFicha() {
+  if (ficha.open) ficha.close();
+  history.replaceState(null, "", location.pathname + location.search);
+}
+ficha.addEventListener("change", () => { document.getElementById("ficha-zap").href = zap(msgProduto()); });
+document.getElementById("ficha-fechar").addEventListener("click", fecharFicha);
+ficha.addEventListener("click", (e) => { if (e.target === ficha) fecharFicha(); });
+ficha.addEventListener("cancel", (e) => { e.preventDefault(); fecharFicha(); });
+document.addEventListener("click", (e) => {
+  const a = e.target.closest("a[data-id]"); if (!a) return;
+  e.preventDefault(); abrirFicha(a.dataset.id);
+});
+if (location.hash.startsWith("#p-")) abrirFicha(location.hash.slice(3));
+
+/* achador de presente */
+const PERGUNTAS = {
+  quem: [["amigo", "Amigo ou amiga"], ["par", "Namorado ou namorada"], ["crianca", "Criança"], ["colega", "Colega de trabalho"], ["eu", "Para mim"]],
+  gosto: [["games", "Games e RPG"], ["series", "Séries e animes"], ["musica", "Música"], ["humor", "Humor"], ["fofura", "Coisas fofas"]],
+  faixa: [["40", "Até R$ 40"], ["80", "Até R$ 80"], ["999", "Acima de R$ 80"]]
+};
+const ESCOLHA = { quem: "amigo", gosto: "humor", faixa: "80" };
+document.querySelectorAll(".opcoes[data-grupo]").forEach((box) => {
+  const g = box.dataset.grupo;
+  box.innerHTML = PERGUNTAS[g].map(([v, t]) =>
+    `<label><input type="radio" name="${g}" value="${v}" ${ESCOLHA[g] === v ? "checked" : ""}><span>${t}</span></label>`).join("");
+});
+const rotulo = (g, v) => PERGUNTAS[g].find((x) => x[0] === v)[1];
+function achar() {
+  const f = new FormData(document.getElementById("form-achar"));
+  const quem = f.get("quem"), gosto = f.get("gosto"), faixa = Number(f.get("faixa"));
+  const min = faixa === 999 ? 80 : 0, max = faixa === 999 ? Infinity : faixa;
+  const nota = (p) => (p.gosto.includes(gosto) ? 2 : 0) + (p.quem.includes(quem) ? 1 : 0) + (p.preco >= min && p.preco <= max ? 2 : -3);
+  const lista = PRODUTOS.map((p) => [nota(p), p]).filter(([n]) => n >= 2).sort((a, b) => b[0] - a[0] || a[1].preco - b[1].preco).slice(0, 3).map(([, p]) => p);
+  const el = document.getElementById("sugestoes");
+  el.innerHTML = lista.length ? lista.map((p) => `<li><a href="#p-${p.id}" data-id="${p.id}"><img src="img/${p.foto}.webp" alt="" width="720" height="720" loading="lazy"><strong>${p.nome}</strong><span>${real(p.preco)}</span></a></li>`).join("")
+    : `<li class="vazio">Nenhum item da vitrine nessa combinação. Envie a mensagem: temos muito mais opções na loja.</li>`;
+  const pessoa = { amigo: "um amigo ou amiga", par: "o meu namorado ou namorada", crianca: "uma criança", colega: "um colega de trabalho", eu: "mim mesmo" }[quem];
+  const faixaTxt = faixa === 999 ? "acima de R$ 80" : "até R$ " + faixa;
+  const ideia = lista.length ? ` Gostei de: ${lista.map((p) => p.nome).join(", ")}.` : "";
+  const msg = `Olá! Estou procurando um presente para ${pessoa}, que gosta de ${rotulo("gosto", gosto).toLowerCase()}, na faixa de ${faixaTxt}.${ideia} Poderiam me ajudar?`;
+  document.getElementById("balao-texto").textContent = msg;
+  document.getElementById("achar-zap").href = zap(msg);
+}
+document.getElementById("form-achar").addEventListener("change", achar);
+achar();
+
+/* menu do celular */
+const botao = document.getElementById("menu-botao"), menu = document.getElementById("menu");
+function menuAberto(sim, devolver) {
+  menu.classList.toggle("aberto", sim);
+  botao.setAttribute("aria-expanded", sim);
+  botao.setAttribute("aria-label", sim ? "Fechar menu" : "Abrir menu");
+  if (!sim && devolver) botao.focus();
+}
+botao.addEventListener("click", () => menuAberto(!menu.classList.contains("aberto")));
+menu.addEventListener("click", (e) => { if (e.target.closest("a")) menuAberto(false); });
+document.addEventListener("click", (e) => { if (menu.classList.contains("aberto") && !e.target.closest(".topo")) menuAberto(false); });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && menu.classList.contains("aberto")) menuAberto(false, true); });
+matchMedia("(min-width: 901px)").addEventListener("change", (e) => { if (e.matches) menuAberto(false); });
+
+/* whatsapp flutuante: aparece depois da abertura e some no rodape */
+const flutua = document.getElementById("zap-flutua");
+function posicaoZap() {
+  const abertura = document.querySelector(".abertura").getBoundingClientRect().bottom;
+  const rodape = document.querySelector(".rodape").getBoundingClientRect().top;
+  flutua.classList.toggle("visivel", abertura < 0 && rodape > innerHeight - 40);
+}
+addEventListener("scroll", posicaoZap, { passive: true });
+addEventListener("resize", posicaoZap);
+posicaoZap();
+</script>
+</body>
+</html>
