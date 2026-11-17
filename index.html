@@ -154,43 +154,37 @@ section { padding: 96px 0; }
 .adesivo:hover img { transform: scale(1.03); }
 .adesivo strong { display: block; margin-top: 16px; font-weight: 600; font-size: 1.0625rem; color: var(--tinta); }
 
-/* achador */
-.achador { background: var(--noite); color: #fff; position: relative; overflow: hidden; }
-.achador::before { content: ""; position: absolute; width: 640px; height: 640px; right: -220px; top: -260px; border-radius: 50%; background: radial-gradient(circle, rgba(240,48,143,.32), rgba(110,53,224,0) 65%); pointer-events: none; }
-.achador .cabeca h2 { color: #fff; }
-.achador .cabeca h2 em { font-style: normal; color: var(--amarelo); }
-.achador .cabeca p { color: rgba(255,255,255,.78); }
-.achador-grade { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 40px; position: relative; }
-.pergunta { border: 0; margin: 0 0 26px; padding: 0; min-width: 0; }
-.pergunta legend { font-weight: 600; font-size: 1.125rem; margin-bottom: 12px; padding: 0; }
-.pergunta legend span { color: var(--amarelo); font-family: var(--titulo); margin-right: 8px; }
-.opcoes { display: flex; flex-wrap: wrap; gap: 10px; }
-.opcoes label { position: relative; }
-.opcoes input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
-.opcoes label span { display: inline-flex; align-items: center; min-height: 46px; padding: 0 18px; border-radius: 999px; background: rgba(255,255,255,.08); box-shadow: inset 0 0 0 1px rgba(255,255,255,.22); transition: background-color .2s, box-shadow .2s, color .2s, transform .2s var(--mola); cursor: pointer; }
-.opcoes label:hover span { background: rgba(255,255,255,.14); }
-.opcoes input:checked + span { background: var(--amarelo); color: #1A0F2E; box-shadow: none; font-weight: 600; }
-.opcoes input:focus-visible + span { outline: 3px solid var(--azul); outline-offset: 3px; }
-.resultado { background: rgba(255,255,255,.06); border-radius: 24px; padding: 28px; box-shadow: inset 0 0 0 1px rgba(255,255,255,.14); min-width: 0; }
-.resultado h3 { font-family: var(--texto); font-weight: 600; font-size: 1.125rem; margin-bottom: 18px; color: rgba(255,255,255,.9); }
-.sugestoes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-.sugestoes a { display: block; text-decoration: none; color: #fff; }
-.sugestoes img { aspect-ratio: 1; object-fit: cover; width: 100%; border-radius: 14px; transition: transform .3s var(--mola); }
-.sugestoes a:hover img { transform: translateY(-3px); }
-.sugestoes strong { display: block; margin-top: 10px; font-weight: 500; font-size: .98rem; line-height: 1.35; }
-.sugestoes span { display: block; color: var(--amarelo); font-weight: 700; margin-top: 2px; }
-.balao { margin-top: 24px; background: #DCF8C6; color: #13321E; border-radius: 16px 16px 16px 4px; padding: 14px 16px; font-size: 1rem; line-height: 1.5; max-width: 34rem; }
-.balao small { display: block; color: #3D6B4C; font-size: .85rem; margin-bottom: 4px; font-weight: 600; }
-.resultado .btn { margin-top: 18px; }
-.vazio { color: rgba(255,255,255,.75); }
-
-/* vitrine */
-.filtros { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
-.filtros button { min-height: 44px; padding: 0 18px; border-radius: 999px; border: 0; background: #fff; box-shadow: inset 0 0 0 1px var(--linha); cursor: pointer; font-weight: 500; transition: background-color .2s, color .2s, box-shadow .2s; }
-.filtros button:hover { box-shadow: inset 0 0 0 1px var(--violeta-claro); }
-.filtros button[aria-pressed="true"] { background: var(--violeta); color: #fff; box-shadow: none; }
-.filtros button small { opacity: .7; margin-left: 4px; font-size: .9em; }
-.produtos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: 24px; }
+/* vitrine: adesivos filtram, prateleiras rolam de lado */
+.adesivos { margin-bottom: 56px; grid-template-columns: repeat(7, minmax(0, 1fr)); }
+.adesivo[aria-pressed="true"] .foto { transform: rotate(0); box-shadow: 0 0 0 4px var(--rosa), 0 14px 30px -16px rgba(30, 21, 48, .45); }
+.adesivo[aria-pressed="true"] strong { color: var(--magenta); }
+.adesivo-todos .foto { display: grid; place-items: center; background: var(--degrade); }
+.adesivo-todos svg { width: 44%; height: 44%; color: #1A0F2E; }
+.vitrine { list-style: none; margin: 0; padding: 0; display: grid; gap: 56px; }
+.prateleira { min-width: 0; }
+.prateleira.some { display: none; }
+.prateleira-topo { display: flex; align-items: center; gap: 8px 16px; margin-bottom: 18px; }
+.prateleira-topo h3 { margin-right: auto; font-size: clamp(1.4rem, 2.4vw, 1.9rem); color: var(--tinta); min-width: 0; }
+.ver-tudo { min-height: 44px; padding: 0 16px; border: 0; border-radius: 999px; background: #fff; box-shadow: inset 0 0 0 1px var(--linha); font-weight: 600; cursor: pointer; transition: box-shadow .2s, color .2s; flex: none; }
+.ver-tudo:hover { box-shadow: inset 0 0 0 1.5px var(--violeta-claro); color: var(--violeta); }
+.setas { display: flex; gap: 8px; }
+.setas[hidden] { display: none; }
+.seta { width: 44px; height: 44px; border-radius: 50%; border: 0; background: #fff; box-shadow: inset 0 0 0 1px var(--linha); display: grid; place-items: center; cursor: pointer; transition: background-color .2s, color .2s; }
+.seta:hover:not(:disabled) { background: var(--violeta); color: #fff; }
+.seta:disabled { opacity: .35; cursor: default; }
+.seta svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.fileira { --col: 4; --vao: 24px; list-style: none; margin: 0; padding: 0; display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - (var(--col) - 1) * var(--vao)) / var(--col)); gap: var(--vao); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.fileira::-webkit-scrollbar { display: none; }
+.fileira > li { scroll-snap-align: start; min-width: 0; }
+.filtrada .prateleira-topo { display: none; }
+.filtrada .fileira { grid-auto-flow: row; grid-template-columns: repeat(var(--col), minmax(0, 1fr)); grid-auto-rows: 1fr; overflow: visible; }
+.fim { border-radius: 20px; background: var(--noite); color: #fff; padding: 28px; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px; position: relative; overflow: hidden; isolation: isolate; }
+.fim::before { content: ""; position: absolute; right: -30%; bottom: -40%; width: 90%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(240,48,143,.45), rgba(110,53,224,0) 65%); z-index: -1; }
+.fim[data-falta="2"] { grid-column: span 2; }
+.fim[data-falta="3"] { grid-column: span 3; }
+.fim-titulo { font-family: var(--titulo); font-size: clamp(1.4rem, 2.2vw, 1.9rem); line-height: 1.1; max-width: 14em; overflow-wrap: break-word; }
+.fim p { color: rgba(255,255,255,.82); max-width: 26rem; }
+.fim .btn { align-self: flex-start; margin-top: 8px; }
 .produto { height: 100%; }
 .produto a { display: flex; flex-direction: column; height: 100%; background: #fff; border-radius: 20px; text-decoration: none; overflow: hidden; box-shadow: 0 1px 0 var(--linha), 0 10px 26px -20px rgba(30,21,48,.35); transition: transform .25s var(--mola), box-shadow .25s var(--mola); }
 .produto a:hover { transform: translateY(-2px); box-shadow: 0 1px 0 var(--linha), 0 18px 32px -20px rgba(30,21,48,.45); }
@@ -270,8 +264,10 @@ dialog.ficha[open] { animation: abre .3s var(--mola); }
 
 /* responsivo */
 @media (max-width: 1100px) {
-  .adesivos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .produtos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .adesivos { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .fileira { --col: 3; }
+  .fim[data-falta="2"] { grid-column: span 1; }
+  .fim[data-falta="3"] { grid-column: span 2; }
 }
 @media (max-width: 900px) {
   #menu-botao { display: block; }
@@ -281,7 +277,7 @@ dialog.ficha[open] { animation: abre .3s var(--mola); }
   .menu .menu-zap { margin: 10px 0 0; justify-content: center; }
   @keyframes desce { from { opacity: 0; transform: translateY(-8px); } }
   section { padding: 72px 0; }
-  .achador-grade, .chegar-grade { grid-template-columns: minmax(0, 1fr); }
+  .chegar-grade { grid-template-columns: minmax(0, 1fr); }
   .natal-grade { grid-template-columns: minmax(0, 1fr); }
   .natal-foto { min-height: 300px; }
   .natal-texto { padding: 56px 16px 64px; }
@@ -296,20 +292,27 @@ dialog.ficha[open] { animation: abre .3s var(--mola); }
   .abertura p { font-size: 1.0625rem; }
   .acoes .btn { flex: 1 1 100%; }
   .fita ul { justify-content: flex-start; padding: 14px 24px; font-size: 1rem; flex-direction: column; gap: 8px; }
-  .adesivos { gap: 20px 16px; }
+  .adesivos { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin: 0 -16px 40px; padding: 8px 16px 6px; }
+  .adesivos::-webkit-scrollbar { display: none; }
+  .adesivos li { flex: 0 0 104px; scroll-snap-align: start; }
+  .adesivo strong { font-size: .95rem; margin-top: 12px; }
+  .vitrine { gap: 44px; }
+  .fileira { --col: 2; --vao: 12px; grid-auto-columns: 46%; margin-inline: -16px; padding-inline: 16px; scroll-padding-inline: 16px; }
+  .filtrada .fileira { margin-inline: 0; padding-inline: 0; }
+  .setas { display: none; }
+  .fim, .fim[data-falta] { grid-column: auto; padding: 20px; }
+  .filtrada .fim[data-falta] { grid-column: 1 / -1; }
+  .fim .btn { align-self: stretch; }
   .adesivo .foto { border-width: 5px; border-radius: 22px; }
-  .produtos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
   .produto .info { padding: 12px 12px 16px; }
   .produto h3 { font-size: 1rem; }
   .preco { font-size: .9rem; left: 8px; bottom: 8px; padding: 4px 9px; }
-  .sugestoes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .resultado { padding: 20px; }
   .cartao { padding: 24px 20px; }
   .natal-texto .btn, .cartao .btn { align-self: stretch; width: 100%; }
 }
 @media (max-width: 380px) {
-  .adesivos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .produtos { grid-template-columns: minmax(0, 1fr); }
+  .fileira { grid-auto-columns: 62%; }
+  .filtrada .fileira { grid-template-columns: minmax(0, 1fr); }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
@@ -325,7 +328,6 @@ dialog.ficha[open] { animation: abre .3s var(--mola); }
     <button id="menu-botao" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span><span></span></button>
     <ul class="menu" id="menu">
       <li><a href="#vitrine">Vitrine</a></li>
-      <li><a href="#achador">Achar um presente</a></li>
       <li><a href="#natal">Natal</a></li>
       <li><a href="#chegar">Como chegar</a></li>
       <li><a class="menu-zap" href="https://wa.me/5516992968297" target="_blank" rel="noopener">(16) 99296-8297</a></li>
@@ -342,8 +344,8 @@ dialog.ficha[open] { animation: abre .3s var(--mola); }
         <h1 id="titulo" data-enter="2">Presentes <em>criativos, divertidos</em> e diferentes.</h1>
         <p data-enter="3">Camisetas, moletons, bonés, canecas, luminárias e acessórios para quem gosta de games, séries, música e boas risadas. Atendemos na loja e enviamos para todo o Brasil.</p>
         <div class="acoes" data-enter="4">
-          <a class="btn btn-cor" href="#achador">Achar um presente</a>
-          <a class="btn btn-vazado" href="#vitrine">Ver a vitrine</a>
+          <a class="btn btn-cor" href="#vitrine">Ver a vitrine</a>
+          <a class="btn btn-vazado" href="#chegar">Como chegar</a>
         </div>
       </div>
     </div>
@@ -357,55 +359,14 @@ dialog.ficha[open] { animation: abre .3s var(--mola); }
     </ul>
   </div>
 
-  <section id="categorias" aria-labelledby="t-cat">
-    <div class="envolve">
-      <div class="cabeca">
-        <h2 id="t-cat">O que você procura?</h2>
-        <p>Escolha uma categoria para ver os produtos na vitrine.</p>
-      </div>
-      <ul class="adesivos" id="lista-categorias"></ul>
-    </div>
-  </section>
-
-  <section class="achador" id="achador" aria-labelledby="t-achar">
-    <div class="envolve">
-      <div class="cabeca">
-        <h2 id="t-achar">Não sabe o que dar? <em>Nós ajudamos.</em></h2>
-        <p>Responda três perguntas e mostramos as melhores opções. Depois, é só enviar a mensagem pronta pelo WhatsApp.</p>
-      </div>
-      <div class="achador-grade">
-        <form id="form-achar" onsubmit="return false">
-          <fieldset class="pergunta">
-            <legend><span>1</span>Para quem é o presente?</legend>
-            <div class="opcoes" data-grupo="quem"></div>
-          </fieldset>
-          <fieldset class="pergunta">
-            <legend><span>2</span>Do que a pessoa gosta?</legend>
-            <div class="opcoes" data-grupo="gosto"></div>
-          </fieldset>
-          <fieldset class="pergunta">
-            <legend><span>3</span>Quanto pretende investir?</legend>
-            <div class="opcoes" data-grupo="faixa"></div>
-          </fieldset>
-        </form>
-        <div class="resultado" aria-live="polite">
-          <h3 id="t-resultado">Sugestões da loja</h3>
-          <ul class="sugestoes" id="sugestoes"></ul>
-          <div class="balao" id="balao"><small>Mensagem que será enviada</small><span id="balao-texto"></span></div>
-          <a class="btn btn-zap" id="achar-zap" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.2-1.6-1.2-3s.7-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.8-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>Enviar pelo WhatsApp</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="vitrine" aria-labelledby="t-vit">
     <div class="envolve">
       <div class="cabeca">
         <h2 id="t-vit">Vitrine</h2>
-        <p>Toque no produto para ver os detalhes e fazer o pedido pelo WhatsApp.</p>
+        <p>Escolha uma categoria ou passe as fileiras para o lado. Toque no produto para ver os detalhes e pedir pelo WhatsApp.</p>
       </div>
-      <div class="filtros" id="filtros" role="group" aria-label="Filtrar por categoria"></div>
-      <ul class="produtos" id="produtos"></ul>
+      <ul class="adesivos" id="categorias" aria-label="Categorias"></ul>
+      <ul class="vitrine" id="lista-vitrine" aria-label="Produtos"></ul>
     </div>
   </section>
 
@@ -461,7 +422,7 @@ dialog.ficha[open] { animation: abre .3s var(--mola); }
       <nav aria-label="Rodapé">
         <ul>
           <li><a href="#vitrine">Vitrine</a></li>
-          <li><a href="#achador">Achar um presente</a></li>
+          <li><a href="#natal">Natal</a></li>
           <li><a href="https://www.facebook.com/lanacriativa.presentes/" target="_blank" rel="noopener">Facebook</a></li>
         </ul>
       </nav>
@@ -533,41 +494,61 @@ const PRODUTOS = [
 
 const nomeCat = (id) => (CATEGORIAS.find((c) => c.id === id) || {}).nome || "";
 
-/* categorias */
-const listaCat = document.getElementById("lista-categorias");
-listaCat.innerHTML = CATEGORIAS.map((c) => `
-  <li><button class="adesivo" type="button" data-cat="${c.id}">
+/* vitrine: os adesivos filtram; sem filtro, uma fileira por categoria que rola de lado */
+const SETA = (d) => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${d < 0 ? "M15 5l-7 7 7 7" : "M9 5l7 7-7 7"}"/></svg>`;
+const reduzir = matchMedia("(prefers-reduced-motion: reduce)");
+document.getElementById("categorias").innerHTML =
+  `<li><button class="adesivo adesivo-todos" type="button" data-cat="todos" aria-pressed="true"><span class="foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></svg></span><strong>Todos</strong></button></li>` +
+  CATEGORIAS.map((c) => `<li><button class="adesivo" type="button" data-cat="${c.id}" aria-pressed="false">
     <span class="foto"><img src="img/${c.foto}.webp" alt="" width="720" height="720" loading="lazy"></span>
-    <strong>${c.nome}</strong>
-  </button></li>`).join("");
-listaCat.addEventListener("click", (e) => {
-  const b = e.target.closest("[data-cat]"); if (!b) return;
-  filtrar(b.dataset.cat);
-  document.getElementById("vitrine").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
-});
-
-/* vitrine */
-const filtros = document.getElementById("filtros");
-const produtosEl = document.getElementById("produtos");
-let catAtual = "todos";
-function desenharFiltros() {
-  const conta = (id) => PRODUTOS.filter((p) => id === "todos" || p.cat === id).length;
-  filtros.innerHTML = [{ id: "todos", nome: "Todos" }, ...CATEGORIAS].map((c) =>
-    `<button type="button" data-f="${c.id}" aria-pressed="${c.id === catAtual}">${c.nome}<small>${conta(c.id)}</small></button>`).join("");
-}
+    <strong>${c.nome}</strong></button></li>`).join("");
 function cartao(p) {
   return `<li class="produto"><a href="#p-${p.id}" data-id="${p.id}">
     <span class="quadro"><img src="img/${p.foto}.webp" alt="${p.nome}" width="720" height="720" loading="lazy"><span class="preco">${real(p.preco)}</span></span>
     <span class="info"><span class="cat">${nomeCat(p.cat)}</span><h3>${p.nome}</h3></span>
   </a></li>`;
 }
-function filtrar(id) {
-  catAtual = id;
-  desenharFiltros();
-  produtosEl.innerHTML = PRODUTOS.filter((p) => id === "todos" || p.cat === id).map(cartao).join("");
+/* fileira com menos de 4 produtos termina num cartao que leva ao WhatsApp: a loja tem mais do que o site */
+const fim = (c, n) => n >= 4 ? "" : `<li class="fim" data-falta="${4 - n}"><p class="fim-titulo">Mais ${c.nome.toLowerCase()} na loja</p><p>Temos outros modelos e estampas que não estão no site.</p><a class="btn btn-cor" href="${zap(`Olá! Vim pelo site e gostaria de ver mais opções de ${c.nome.toLowerCase()}.`)}" target="_blank" rel="noopener">Consultar pelo WhatsApp</a></li>`;
+const vitrine = document.getElementById("lista-vitrine");
+vitrine.innerHTML = CATEGORIAS.map((c) => {
+  const lista = PRODUTOS.filter((p) => p.cat === c.id);
+  return `<li class="prateleira" data-cat="${c.id}">
+    <div class="prateleira-topo">
+      <h3 id="fileira-${c.id}">${c.nome}</h3>
+      <button class="ver-tudo" type="button" data-ver="${c.id}">Ver tudo (${lista.length})</button>
+      <div class="setas"><button class="seta" type="button" data-passo="-1" aria-label="Voltar em ${c.nome}">${SETA(-1)}</button><button class="seta" type="button" data-passo="1" aria-label="Mais em ${c.nome}">${SETA(1)}</button></div>
+    </div>
+    <ul class="fileira" aria-labelledby="fileira-${c.id}">${lista.map(cartao).join("")}${fim(c, lista.length)}</ul>
+  </li>`;
+}).join("");
+function filtrar(cat) {
+  document.querySelectorAll("#categorias [data-cat]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.cat === cat)));
+  document.querySelectorAll(".prateleira").forEach((li) => li.classList.toggle("some", cat !== "todos" && li.dataset.cat !== cat));
+  vitrine.classList.toggle("filtrada", cat !== "todos");
+  setas();
 }
-filtros.addEventListener("click", (e) => { const b = e.target.closest("[data-f]"); if (b) filtrar(b.dataset.f); });
-filtrar("todos");
+document.getElementById("categorias").addEventListener("click", (e) => { const b = e.target.closest("[data-cat]"); if (b) filtrar(b.dataset.cat); });
+vitrine.addEventListener("click", (e) => {
+  const ver = e.target.closest("[data-ver]");
+  if (ver) { filtrar(ver.dataset.ver); document.getElementById("categorias").scrollIntoView({ behavior: reduzir.matches ? "auto" : "smooth" }); return; }
+  const seta = e.target.closest("[data-passo]"); if (!seta) return;
+  const f = seta.closest(".prateleira").querySelector(".fileira");
+  f.scrollBy({ left: seta.dataset.passo * f.clientWidth, behavior: reduzir.matches ? "auto" : "smooth" });
+});
+/* setas so aparecem quando a fileira passa da tela; apagam nas pontas */
+function setas() {
+  document.querySelectorAll(".prateleira").forEach((pr) => {
+    const f = pr.querySelector(".fileira"), [ant, prox] = pr.querySelectorAll("[data-passo]");
+    const sobra = f.scrollWidth - f.clientWidth;
+    pr.querySelector(".setas").hidden = sobra < 2;
+    ant.disabled = f.scrollLeft < 2;
+    prox.disabled = f.scrollLeft > sobra - 2;
+  });
+}
+document.querySelectorAll(".fileira").forEach((f) => f.addEventListener("scroll", setas, { passive: true }));
+addEventListener("resize", setas);
+setas();
 
 /* ficha do produto */
 const ficha = document.getElementById("ficha");
@@ -605,38 +586,6 @@ document.addEventListener("click", (e) => {
   e.preventDefault(); abrirFicha(a.dataset.id);
 });
 if (location.hash.startsWith("#p-")) abrirFicha(location.hash.slice(3));
-
-/* achador de presente */
-const PERGUNTAS = {
-  quem: [["amigo", "Amigo ou amiga"], ["par", "Namorado ou namorada"], ["crianca", "Criança"], ["colega", "Colega de trabalho"], ["eu", "Para mim"]],
-  gosto: [["games", "Games e RPG"], ["series", "Séries e animes"], ["musica", "Música"], ["humor", "Humor"], ["fofura", "Coisas fofas"]],
-  faixa: [["40", "Até R$ 40"], ["80", "Até R$ 80"], ["999", "Acima de R$ 80"]]
-};
-const ESCOLHA = { quem: "amigo", gosto: "humor", faixa: "80" };
-document.querySelectorAll(".opcoes[data-grupo]").forEach((box) => {
-  const g = box.dataset.grupo;
-  box.innerHTML = PERGUNTAS[g].map(([v, t]) =>
-    `<label><input type="radio" name="${g}" value="${v}" ${ESCOLHA[g] === v ? "checked" : ""}><span>${t}</span></label>`).join("");
-});
-const rotulo = (g, v) => PERGUNTAS[g].find((x) => x[0] === v)[1];
-function achar() {
-  const f = new FormData(document.getElementById("form-achar"));
-  const quem = f.get("quem"), gosto = f.get("gosto"), faixa = Number(f.get("faixa"));
-  const min = faixa === 999 ? 80 : 0, max = faixa === 999 ? Infinity : faixa;
-  const nota = (p) => (p.gosto.includes(gosto) ? 2 : 0) + (p.quem.includes(quem) ? 1 : 0) + (p.preco >= min && p.preco <= max ? 2 : -3);
-  const lista = PRODUTOS.map((p) => [nota(p), p]).filter(([n]) => n >= 2).sort((a, b) => b[0] - a[0] || a[1].preco - b[1].preco).slice(0, 3).map(([, p]) => p);
-  const el = document.getElementById("sugestoes");
-  el.innerHTML = lista.length ? lista.map((p) => `<li><a href="#p-${p.id}" data-id="${p.id}"><img src="img/${p.foto}.webp" alt="" width="720" height="720" loading="lazy"><strong>${p.nome}</strong><span>${real(p.preco)}</span></a></li>`).join("")
-    : `<li class="vazio">Nenhum item da vitrine nessa combinação. Envie a mensagem: temos muito mais opções na loja.</li>`;
-  const pessoa = { amigo: "um amigo ou amiga", par: "o meu namorado ou namorada", crianca: "uma criança", colega: "um colega de trabalho", eu: "mim mesmo" }[quem];
-  const faixaTxt = faixa === 999 ? "acima de R$ 80" : "até R$ " + faixa;
-  const ideia = lista.length ? ` Gostei de: ${lista.map((p) => p.nome).join(", ")}.` : "";
-  const msg = `Olá! Estou procurando um presente para ${pessoa}, que gosta de ${rotulo("gosto", gosto).toLowerCase()}, na faixa de ${faixaTxt}.${ideia} Poderiam me ajudar?`;
-  document.getElementById("balao-texto").textContent = msg;
-  document.getElementById("achar-zap").href = zap(msg);
-}
-document.getElementById("form-achar").addEventListener("change", achar);
-achar();
 
 /* menu do celular */
 const botao = document.getElementById("menu-botao"), menu = document.getElementById("menu");
